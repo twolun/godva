@@ -1,0 +1,119 @@
+:global {
+// Color variables (appears count calculates by raw css)
+@color0: #ffffff; // Appears 3 times
+@color1: #2db7f5; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width1: 224px; // Appears 2 times
+@width2: 64px; // Appears 2 times
+
+// Height variables (appears count calculates by raw css)
+@height2: 100%; // Appears 7 times
+
+html {
+  height: @height2;
+  overflow-y: hidden;
+}
+body {
+  height: @height2;
+  overflow-y: hidden;
+}
+#root {
+  height: @height2;
+  overflow-y: hidden;
+}
+.ant-layout-aside {
+  height: @height2;
+  position: relative;
+  .ant-layout-logo {
+    background: #333333;
+    border-radius: 6px;
+    height: 32px;
+    margin: 16px 24px 16px 28px;
+    transition: all 0.3s ease;
+    width: 150px;
+  }
+  .ant-layout-sider {
+    background: #404040;
+    height: @height2;
+    overflow: visible;
+    padding-bottom: 24px;
+    position: fixed;
+    transition: all 0.3s ease;
+    width: @width1;
+  }
+  .ant-layout-sider>.ant-menu {
+    margin-bottom: 20px;
+  }
+  .ant-layout-sider>.ant-menu>.ant-menu-item {
+    margin: 16px 0;
+    .nav-text {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+  }
+  .ant-layout-sider>.ant-menu>.ant-menu-item>.anticon {
+    transition: font-size .3s;
+  }
+  .ant-aside-action {
+    background: #656565;
+    bottom: 0;
+    color: @color0;
+    cursor: pointer;
+    height: 42px;
+    line-height: 42px;
+    position: fixed;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: @width1;
+  }
+  .ant-layout-object {
+    height: @height2;
+    margin-left: 224px;
+    transition: all 0.3s ease;
+  }
+}
+.ant-layout-aside-collapse {
+  .ant-layout-logo {
+    margin: 16px;
+    transition: all 0.3s ease;
+    width: 32px;
+  }
+  .ant-layout-sider {
+    transition: all 0.3s ease;
+    width: @width2;
+  }
+  .ant-layout-sider>.ant-menu>.ant-menu-item {
+    transition: all 0s ease;
+    .nav-text {
+      display: none;
+    }
+    &:hover {
+      background: @color1;
+      color: @color0;
+      transition: all 0s ease;
+      .nav-text {
+        background: @color1;
+        border-radius: 0 5px 5px 0;
+        color: @color0;
+        display: inline-block;
+        padding-right: 16px;
+        vertical-align: top;
+      }
+    }
+  }
+  .ant-layout-sider>.ant-menu>.ant-menu-item>.anticon {
+    display: inline-block;
+    font-size: 16px;
+  }
+  .ant-aside-action {
+    transition: all 0.3s ease;
+    width: @width2;
+  }
+  .ant-layout-object {
+    height: @height2;
+    margin-left: 64px;
+    transition: all 0.3s ease;
+  }
+}
+}

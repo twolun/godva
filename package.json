@@ -4,6 +4,8 @@
     "index": "./src/index.js"
   },
   "dependencies": {
+    "antd": "^2.1.0",
+    "babel-plugin-import": "^1.0.1",
     "dva": "^1.1.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
@@ -23,7 +25,7 @@
     "redbox-react": "^1.2.10"
   },
   "scripts": {
-    "start": "dora -p 8080 --plugins \"proxy?watchDirs=./mock,webpack,webpack-hmr\"",
+    "start": "dora -p 8080 --plugins \"webpack\"",
     "build": "atool-build",
     "test": "atool-test-mocha ./src/**/*-test.js"
   }
