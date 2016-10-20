@@ -1,6 +1,7 @@
 import './index.html';
 import './index.less';
 import dva from 'dva';
+import browserHistory from 'dva/router';
 
 // 1. Initialize
 const app = dva({
@@ -10,6 +11,7 @@ const app = dva({
       { name: 'antd', id: 2 },
     ],
   },
+  history: browserHistory,
 });
 
 // 2. Plugins

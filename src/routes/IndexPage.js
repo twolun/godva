@@ -10,7 +10,10 @@ function IndexPage() {
       <hr />
       <ul className={styles.list}>
         <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
-        <li><a href="/#/home">Getting Started</a></li>
+        <li><a href="/">Getting Started</a></li>
+        <li><a href="/#/home">Home</a></li>
+        <li><a href="/#/products">Products</a></li>
+        <li><a href="/#/dashboard">Dashboard</a></li>
       </ul>
     </div>
   );
