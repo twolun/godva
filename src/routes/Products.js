@@ -3,15 +3,6 @@ import { connect } from 'dva';
 import ProductList from '../components/ProductList';
 import styles from './Products.less';
 
-const inlineStyles = {
-  list: {
-    width: '60%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: '100px',
-  }
-};
-
 const Products = (props) => {
 
   function handleDelete(id) {
