@@ -1,7 +1,6 @@
 :global {
 // Color variables (appears count calculates by raw css)
 @color0: #ffffff; // Appears 3 times
-@color1: #2db7f5; // Appears 2 times
 
 // Width variables (appears count calculates by raw css)
 @width1: 224px; // Appears 2 times
@@ -89,16 +88,18 @@ body {
       display: none;
     }
     &:hover {
-      background: @color1;
+      background: #2db7f5;
       color: @color0;
       transition: all 0s ease;
       .nav-text {
-        background: @color1;
+	background: rgba(45, 183, 245, 0.8);
         border-radius: 0 5px 5px 0;
         color: @color0;
         display: inline-block;
+        //display: none;
         padding-right: 16px;
         vertical-align: top;
+	//box-shadow: 2px 2px 2px #404040;
       }
     }
   }
