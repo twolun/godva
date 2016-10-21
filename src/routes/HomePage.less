@@ -1,25 +1,45 @@
 :global {
 // Color variables (appears count calculates by raw css)
 @color0: #ffffff; // Appears 3 times
+@color-light-grey: #b7b7b7;
 
 
 
 .ant-layout-top {
   height: 100%;
+  overflow-y: true;
   .ant-layout-wrapper {
-    padding: 0 50px;
+    padding: 1.5em 2.5em;
   }
   .ant-layout-header {
     background: @color0;
-    height: 48px;
+    height: 6em;
+    margin: auto 0;
+    .ant-header-logo {
+      float: left;
+      height: 48px;
+      width: 48px;
+      background: @color-light-grey;
+      margin-left: 10%;
+      border-radius: 4px;
+    }
+    .ant-header-menu {
+      borderBottom: 'none';
+      background: @color0;
+      float: right;
+      margin-right: 10%;
+      border-bottom: none;
+    }
   }
   .ant-layout-logo {
-    background: #aaaaaa;
+    background: @color-light-grey;
     border-radius: 6px;
     float: left;
     height: 32px;
-    margin: 16px 28px 16px 0;
     width: 96px;
+    margin-left: 10%;
+    margin-top: 1em;
+    z-index: 100;
   }
   .ant-layout-subheader {
     background: @color0;
@@ -31,16 +51,45 @@
   }
   .ant-layout-container {
     background: @color0;
-    overflow: hidden;
     position: relative;
     width: 100%;
+    box-shadow: 2px 2px 2px #101010;
+  }
+  .ant-layout-button {
+    margin-left: auto;
+    margin-right: auto;
+    horizontal-align: center;
   }
   .ant-layout-footer {
-    color: #999999;
-    font-size: 12px;
-    height: 64px;
-    line-height: 64px;
-    text-align: center;
+    background: #262626;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1em;
+    z-index: -1;
+    .ant-footer-about {
+      font-size: 14px;
+      color: @color-light-grey;
+      margin: 1em;
+    }
+    .ant-footer-resource {
+      font-size: 14px;
+      color: @color-light-grey;
+      margin: 1em;
+    }
+    .ant-footer-rights {
+      clear:both;
+      float:right;
+      font-size: 14px;
+      color: @color-light-grey;
+      margin: 1em;
+    }
+    .ant-footer-item a {
+      color: #1d80d3;
+      &:hover {
+	color: #2db7f5;
+      }
+    }
   }
 }
 }
