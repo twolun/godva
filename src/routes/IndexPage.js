@@ -13,7 +13,7 @@ function IndexPage() {
         <li><a href="/">Getting Started</a></li>
         <li><a href="/#/home">Home</a></li>
         <li><a href="/#/products">Products</a></li>
-        <li><a href="/#/dashboard">Dashboard</a></li>
+        <li><a href="/#/sidebar">Sidebar</a></li>
       </ul>
     </div>
   );
