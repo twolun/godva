@@ -5,6 +5,7 @@ import HomePage from './routes/HomePage';
 import Sidebar from './routes/Sidebar';
 import NotFound from './routes/NotFound';
 import Products from './routes/Products';
+import Lab from './routes/Lab';
 
 export default function({ history }) {
   return (
@@ -13,6 +14,7 @@ export default function({ history }) {
       <Route path="/home" component={HomePage} />
       <Route path="/sidebar" component={Sidebar} />
       <Route path="/products" component={Products} />
+      <Route path="/lab" component={Lab} />
       <Route path="*" component={NotFound} />
     </Router>
   );
