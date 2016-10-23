@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { DatePicker, message } from 'antd';
 import { Row, Col } from 'antd';
 import { Menu, Breadcrumb, Icon, Tooltip } from 'antd';
-import './Sidebar.less';
+import styles from './Sidebar.less';
 
 const SubMenu = Menu.SubMenu;
 
@@ -22,33 +22,40 @@ class Ant extends React.Component {
     })
   }
 
+  componentDidMount() {
+    document.documentElement.style.height = "100%";
+    document.body.style.height = "100%";
+    document.getElementById('root').style.height = "100%";
+    document.getElementById('root').style.overflowY = "hidden";
+  }
+
   render() {
     return (
-      <div className={this.state.collapse ? "ant-layout-aside ant-layout-aside-collapse" : "ant-layout-aside"}>
-        <aside className="ant-layout-sider">
-          <div className="ant-layout-logo"></div>
+      <div className={this.state.collapse ? styles.ant_layout_aside + ' ' + styles.ant_layout_aside_collapse : styles.ant_layout_aside}>
+        <aside className={styles.ant_layout_sider}>
+          <div className={styles.ant_layout_logo}></div>
           <Menu mode="inline" theme="dark" defaultSelectedKeys={['dashboard']}>
             <Menu.Item key="profile">
-              <Icon type="user" /><span className="nav-text">Profile</span>
+              <Icon type="user" /><span className={styles.nav_text}>Profile</span>
             </Menu.Item>
             <Menu.Item key="dashboard">
-              <Icon type="appstore-o" /><span className="nav-text">Dashboard</span>
+              <Icon type="appstore-o" /><span className={styles.nav_text}>Dashboard</span>
             </Menu.Item>
             <Menu.Item key="ui">
-              <Icon type="laptop" /><span className="nav-text">UI</span>
+              <Icon type="laptop" /><span className={styles.nav_text}>UI</span>
             </Menu.Item>
             <Menu.Item key="editor">
-              <Icon type="edit" /><span className="nav-text">Editor</span>
+              <Icon type="edit" /><span className={styles.nav_text}>Editor</span>
             </Menu.Item>
             <Menu.Item key="info">
-              <Icon type="info-circle-o" /><span className="nav-text">About</span>
+              <Icon type="info-circle-o" /><span className={styles.nav_text}>About</span>
             </Menu.Item>
           </Menu>
-          <div className="ant-aside-action" onClick={this.onCollapseChange}>
+          <div className={styles.ant_aside_action} onClick={this.onCollapseChange}>
             {this.state.collapse ? <Icon type="right" /> : <Icon type="left" />}
           </div>
         </aside>
-        <div className="ant-layout-object">
+        <div className={styles.ant_layout_object}>
           <object style={{width:'100%',height:'100%'}} type='text/html' data={'http://docker-red-dev.accrete.org:8000/editor'} />
         </div>
       </div>
