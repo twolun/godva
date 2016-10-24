@@ -23,9 +23,6 @@ class Ant extends React.Component {
   }
 
   componentDidMount() {
-    document.documentElement.style.height = "100%";
-    document.body.style.height = "100%";
-    document.getElementById('root').style.height = "100%";
     document.getElementById('root').style.overflowY = "hidden";
   }
 

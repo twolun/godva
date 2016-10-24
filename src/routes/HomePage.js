@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { Row, Col } from 'antd';
-import { Menu, Breadcrumb, Icon, Tooltip } from 'antd';
+import { Affix, Menu, Breadcrumb, Icon, Tooltip } from 'antd';
 import './HomePage.less';
 
 const ButtonGroup = Button.Group;
@@ -18,44 +18,35 @@ class HomePage extends React.Component {
     })
   }
 
-  componentDidMount() {
-    document.documentElement.style.height ="auto";
-    document.documentElement.style.padding = "0";
-    document.documentElement.style.margin = "0";
-    document.body.style.height = "auto";
-    document.body.style.padding = "0";
-    document.body.style.margin = "0";
-    document.getElementById('root').style.height = "auto";
-    document.getElementById('root').style.overflowY = "auto";
-  }
-
   render() {
     return (
       <div className="ant-layout-top">
+        <Affix>
         <div className="ant-layout-header">
-          <div className="ant-layout-wrapper">
-            <Row>
-              <Col xs={6} sm={6} md={6} lg={6}>
-                <div className="ant-header-logo">GoIoT</div>
-              </Col>
-              <Col xs={14} sm={14} md={14} lg={14}>
-              <Menu theme="light" mode="horizontal" className="ant-header-menu">
-                <Menu.Item key="1">Why GoIoT</Menu.Item>
-                <Menu.Item key="2">Pricing</Menu.Item>
-                <Menu.Item key="3">Explore</Menu.Item>
-              </Menu>
-              </Col>
-              <Col xs={4} sm={4} md={4} lg={4}>
-                <div className="ant-header-button">
-                  <Button type="primary">Login<Icon type="down" /></Button>
-                </div>
-              </Col>
-            </Row>
-          </div>
+          <Row>
+            <Col xs={2} sm={2} md={2} lg={2} />
+            <Col xs={4} sm={4} md={4} lg={4}>
+              <div className="ant-header-logo">GoIoT</div>
+            </Col>
+            <Col xs={12} sm={12} md={12} lg={12}>
+            <Menu theme="light" mode="horizontal" className="ant-header-menu">
+              <Menu.Item key="1">Why GoIoT</Menu.Item>
+              <Menu.Item key="2">Pricing</Menu.Item>
+              <Menu.Item key="3">Explore</Menu.Item>
+            </Menu>
+            </Col>
+            <Col xs={4} sm={4} md={4} lg={4}>
+              <div className="ant-header-button">
+                <Button type="primary">Login<Icon type="down" /></Button>
+              </div>
+            </Col>
+            <Col xs={2} sm={2} md={2} lg={2} />
+          </Row>
         </div>
-        <div className="ant-layout-container">
-          <div style={{ height: 1000 }}>
-          </div>
+        </Affix>
+        <div className="ant-layout-content">
+          <div style={{ background: "#666", height: "100vh" }}>100vh</div>
+          <div style={{ background: "#fff", height: "100px" }}>100px</div>
         </div>
         <div className="ant-layout-footer">
           <Row>
