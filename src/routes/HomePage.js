@@ -38,15 +38,17 @@ class HomePage extends React.Component {
               <Col xs={6} sm={6} md={6} lg={6}>
                 <div className="ant-header-logo">GoIoT</div>
               </Col>
-              <Col xs={18} sm={18} md={18} lg={18}>
+              <Col xs={14} sm={14} md={14} lg={14}>
               <Menu theme="light" mode="horizontal" className="ant-header-menu">
                 <Menu.Item key="1">Why GoIoT</Menu.Item>
                 <Menu.Item key="2">Pricing</Menu.Item>
                 <Menu.Item key="3">Explore</Menu.Item>
-                <Menu.Item key="4" style={{borderBottom:'none'}}>
-                  <Button type="primary">Login<Icon type="down" /></Button>
-                </Menu.Item>
               </Menu>
+              </Col>
+              <Col xs={4} sm={4} md={4} lg={4}>
+                <div className="ant-header-button">
+                  <Button type="primary">Login<Icon type="down" /></Button>
+                </div>
               </Col>
             </Row>
           </div>
