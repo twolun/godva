@@ -22,11 +22,9 @@ class HomePage extends React.Component {
     document.documentElement.style.height ="auto";
     document.documentElement.style.padding = "0";
     document.documentElement.style.margin = "0";
-    document.documentElement.style.background = "rgb(236, 240, 241)";
     document.body.style.height = "auto";
     document.body.style.padding = "0";
     document.body.style.margin = "0";
-    document.body.style.background = "rgb(236, 240, 241)";
     document.getElementById('root').style.height = "auto";
     document.getElementById('root').style.overflowY = "visible";
   }
@@ -59,24 +57,35 @@ class HomePage extends React.Component {
         </div>
         <div className="ant-layout-footer">
           <Row>
-            <Col xs={6} sm={6} md={6} lg={6}>
+            <Col xs={4} sm={4} md={4} lg={4}>
               <ul className="ant-footer-about">
-                <li>About</li>
-                <li className="ant-footer-item"><a href="#">reserved text 1</a></li>
-                <li className="ant-footer-item"><a href="#">reserved text 2</a></li>
+                <li className="ant-footer-title">About</li>
+                <li className="ant-footer-item"><a target="_blank" href="#">Team</a></li>
+                <li className="ant-footer-item"><a target="_blank" href="#">Blog</a></li>
+                <li className="ant-footer-item"><a target="_blank" href="#">Contact</a></li>
               </ul>
             </Col>
-            <Col xs={6} sm={6} md={6} lg={6}>
+            <Col xs={4} sm={4} md={4} lg={4}>
               <ul className="ant-footer-resource">
-                <li>Resource</li>
-                <li className="ant-footer-item"><a href="#">resource 1</a></li>
-                <li className="ant-footer-item"><a href="#">resource 2</a></li>
+                <li className="ant-footer-title">Resource</li>
+                <li className="ant-footer-item"><a target="_blank" href="#">Community</a></li>
+                <li className="ant-footer-item"><a target="_blank" href="#">Tutorial</a></li>
+                <li className="ant-footer-item"><a target="_blank" href="#">Documentation</a></li>
+              </ul>
+            </Col>
+            <Col xs={4} sm={4} md={4} lg={4}>
+              <ul className="ant-footer-external">
+                <li className="ant-footer-title">External</li>
+                <li className="ant-footer-item"><a target="_blank" href="http://nodered.org">Node-RED</a></li>
               </ul>
             </Col>
             <Col xs={12} sm={12} md={12} lg={12}>
               <ul className="ant-footer-rights">
+                <br className="ant-footer-title" />
                 <li>GoIoT © 2016</li>
-                <li>Made with love by linkgo.io</li>
+                <li>
+                  Made with <span style={{ color: "#e01515" }}>&hearts;</span> by <span className="ant-footer-item"><a target="_blank" href="https://linkgo.io">linkgo.io</a></span>
+                </li>
               </ul>
             </Col>
           </Row>
