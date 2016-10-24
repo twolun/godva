@@ -26,7 +26,7 @@ class HomePage extends React.Component {
     document.body.style.padding = "0";
     document.body.style.margin = "0";
     document.getElementById('root').style.height = "auto";
-    document.getElementById('root').style.overflowY = "visible";
+    document.getElementById('root').style.overflowY = "auto";
   }
 
   render() {
