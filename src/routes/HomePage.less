@@ -1,6 +1,5 @@
 :global {
 // Color variables (appears count calculates by raw css)
-@color0: #ffffff; // Appears 3 times
 @color-light-grey: #b7b7b7;
 
 
@@ -9,7 +8,7 @@
   height: 100%;
   overflow-y: true;
   .ant-layout-header {
-    background: @color0;
+    background: rgba(255,255,255,0.8);
     margin: 0px 0px 16px 0px;
     padding-top: 16px;
     height: 64px;
@@ -24,12 +23,41 @@
       border-radius: 4px;
     }
     .ant-header-menu {
-      background: @color0;
+      background: rgba(0,0,0,0);
       float: right;
       border-bottom: none;
     }
     .ant-header-button{
-      background: @color0;
+      background: rgba(0,0,0,0);
+      float: left;
+      margin-left: 10%;
+      /* align with ant-menu */
+      height: 48px;
+      padding: 8px 16px;
+    }
+  }
+  .ant-layout-header-affixed {
+    background: rgba(0,0,0,0);
+    margin: 0px 0px 16px 0px;
+    padding-top: 16px;
+    height: 64px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    .ant-header-logo {
+      float: left;
+      height: 48px;
+      width: 48px;
+      background: @color-light-grey;
+      border-radius: 4px;
+    }
+    .ant-header-menu {
+      background: rgba(0,0,0,0);
+      float: right;
+      border-bottom: none;
+    }
+    .ant-header-button{
+      background: rgba(0,0,0,0);
       float: left;
       margin-left: 10%;
       /* align with ant-menu */
@@ -38,7 +66,7 @@
     }
   }
   .ant-layout-content {
-    background: @color0;
+    background: #fff;
     position: relative;
     width: 100%;
     box-shadow: 2px 2px 2px #101010;

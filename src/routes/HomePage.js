@@ -10,26 +10,22 @@ class HomePage extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
+      affixed: true,
     };
-  }
-
-  onCollapseChange() {
-    this.setState({
-    })
   }
 
   render() {
     return (
       <div className="ant-layout-top">
-        <Affix>
-        <div className="ant-layout-header">
+        <Affix onChange={status => this.setState({affixed: !status})}>
+        <div className={this.state.affixed ? "ant-layout-header-affixed" : "ant-layout-header"}>
           <Row>
             <Col xs={2} sm={2} md={2} lg={2} />
             <Col xs={4} sm={4} md={4} lg={4}>
               <div className="ant-header-logo">GoIoT</div>
             </Col>
             <Col xs={12} sm={12} md={12} lg={12}>
-            <Menu theme="light" mode="horizontal" className="ant-header-menu">
+            <Menu theme={this.state.affixed ? "dark" : "light"} mode="horizontal" className="ant-header-menu">
               <Menu.Item key="1">Why GoIoT</Menu.Item>
               <Menu.Item key="2">Pricing</Menu.Item>
               <Menu.Item key="3">Explore</Menu.Item>
@@ -45,7 +41,7 @@ class HomePage extends React.Component {
         </div>
         </Affix>
         <div className="ant-layout-content">
-          <div style={{ background: "#666", height: "100vh" }}>100vh</div>
+          <div style={{ background: "#444", height: "100vh" }}>100vh</div>
           <div style={{ background: "#fff", height: "100px" }}>100px</div>
         </div>
         <div className="ant-layout-footer">
