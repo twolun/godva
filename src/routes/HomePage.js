@@ -47,7 +47,8 @@ class HomePage extends React.Component {
         </div>
         <div className="ant-layout-footer">
           <Row>
-            <Col xs={4} sm={4} md={4} lg={4}>
+            <Col xs={3} sm={2} md={2} lg={2} />
+            <Col xs={7} sm={4} md={4} lg={4}>
               <ul className="ant-footer-about">
                 <li className="ant-footer-title">About</li>
                 <li className="ant-footer-item"><a target="_blank" href="#">Team</a></li>
@@ -55,7 +56,7 @@ class HomePage extends React.Component {
                 <li className="ant-footer-item"><a target="_blank" href="#">Contact</a></li>
               </ul>
             </Col>
-            <Col xs={4} sm={4} md={4} lg={4}>
+            <Col xs={7} sm={4} md={4} lg={4}>
               <ul className="ant-footer-resource">
                 <li className="ant-footer-title">Resource</li>
                 <li className="ant-footer-item"><a target="_blank" href="#">Community</a></li>
@@ -63,13 +64,14 @@ class HomePage extends React.Component {
                 <li className="ant-footer-item"><a target="_blank" href="#">Documentation</a></li>
               </ul>
             </Col>
-            <Col xs={4} sm={4} md={4} lg={4}>
+            <Col xs={7} sm={4} md={4} lg={4}>
               <ul className="ant-footer-external">
                 <li className="ant-footer-title">External</li>
                 <li className="ant-footer-item"><a target="_blank" href="http://nodered.org">Node-RED</a></li>
               </ul>
             </Col>
-            <Col xs={12} sm={12} md={12} lg={12}>
+            <Col xs={0} sm={2} md={4} lg={4} />
+            <Col xs={24} sm={6} md={4} lg={4}>
               <ul className="ant-footer-rights">
                 <br className="ant-footer-title" />
                 <li>GoIoT © 2016</li>
@@ -78,6 +80,7 @@ class HomePage extends React.Component {
                 </li>
               </ul>
             </Col>
+            <Col xs={0} sm={2} md={2} lg={2} />
           </Row>
         </div>
       </div>
