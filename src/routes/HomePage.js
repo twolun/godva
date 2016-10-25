@@ -22,7 +22,7 @@ class HomePage extends React.Component {
           <Row>
             <Col xs={2} sm={2} md={2} lg={2} />
             <Col xs={4} sm={4} md={4} lg={4}>
-              <div className="ant-header-logo">GoIoT</div>
+              <div className="ant-header-logo"></div>
             </Col>
             <Col xs={12} sm={12} md={12} lg={12}>
             <Menu theme={this.state.affixed ? "dark" : "light"} mode="horizontal" className="ant-header-menu">
@@ -43,7 +43,7 @@ class HomePage extends React.Component {
         <div className="ant-layout-content">
           <div style={{ background: "#444", height: "100vh" }}></div>
           <div style={{ background: "#ddd", height: "100vh" }}></div>
-          <div style={{ background: "#fff", height: "100vh" }}></div>
+          <div style={{ background: "#fff", height: "100vh", paddingBottom: "175px" }}></div>
         </div>
         <div className="ant-layout-footer">
           <Row>
