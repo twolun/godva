@@ -52,8 +52,8 @@ class Ant extends React.Component {
             {this.state.collapse ? <Icon type="right" /> : <Icon type="left" />}
           </div>
         </aside>
-        <div className="ant-layout-object">
-          <object style={{width:'100%',height:'100%'}} type='text/html' data={'http://docker-red-dev.accrete.org:8000/editor'} />
+        <div className="ant-layout-frame">
+          <iframe id="iframe-red" width="100%" height="100%" frameBorder="0" src="http://docker-red.accrete.org:8000/editor"></iframe>
         </div>
       </div>
     );
