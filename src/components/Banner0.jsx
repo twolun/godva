@@ -9,7 +9,7 @@ import '../less/banner0.less';
 class Banner extends React.Component {
   render() {
     const { block1 } = this.props.dataSource;
-    const { top, logo, title, content, button, bgImg } = block1;
+    const { top, logo, title, content1, content2, button, bgImg } = block1;
     const props = { ...this.props };
     delete props.dataSource;
     delete props.name;
@@ -34,8 +34,11 @@ class Banner extends React.Component {
         >
           {logo ? <span className="logo" key="logo"><img width="100%" src={logo} /></span> : null}
           {title ? <h1 key="h1">{title}</h1> : null}
-          <p key="content">{content}</p>
-          <Button type="ghost" key="button">{button}</Button>
+          <div className="text">
+            <p key="content1">{content1}</p>
+            <p key="content2">{content2}</p>
+          </div>
+          <Button type="ghost" key="button">{button}<span style={{fontSize: "8px", color: "#a51616"}}>&nbsp;alpha</span></Button>
         </QueueAnim>
         <TweenOne
           animation={{ y: '-=20', yoyo: true, repeat: -1, duration: 1000 }}
