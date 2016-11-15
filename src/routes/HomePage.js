@@ -79,9 +79,32 @@ class HomePage extends React.Component {
         </div>
         </Affix>
         <div className="ant-layout-content">
-          <div style={{ background: "#444", height: "100vh" }}></div>
-          <div style={{ background: "#ddd", height: "100vh" }}></div>
-          <div style={{ background: "#fff", height: "100vh" }}></div>
+          <div className="ant-layout-content-page-0">
+            <Row>
+              <Col xs={2} sm={2} md={2} lg={2} style={{height: "100vh", border: "1px solid"}} />
+              <Col xs={12} sm={12} md={12} lg={12} style={{height: "100vh", border: "1px solid"}}>
+                <div className="page-0-content-picture-wrap">
+                  <p style={{textAlign: "left"}}>
+                    <img src="http://o7spigzvd.bkt.clouddn.com/page-1-picture-sketch.png" className="page-0-content-picture" />
+                  </p>
+                </div>
+              </Col>
+              <Col xs={8} sm={8} md={8} lg={8} style={{height: "100vh", border: "1px solid"}}>
+                <div className="page-0-content-text-wrap">
+                  <p style={{textAlign: "left"}}>
+                    <p>Release your creativity</p>
+                    <br />
+                    <Button type="primary">Try it out</Button>
+                  </p>
+                </div>
+              </Col>
+              <Col xs={2} sm={2} md={2} lg={2}  style={{height: "100vh", border: "1px solid"}} />
+            </Row>
+          </div>
+          <div className="ant-layout-content-page-1">
+          </div>
+          <div className="ant-layout-content-page-2">
+          </div>
         </div>
         <div className="ant-layout-footer">
           <Row>
