@@ -4,12 +4,14 @@ import { scrollScreen } from 'rc-scroll-anim';
 import '../less/common.less';
 import Nav1 from '../components/Nav';
 import Banner0 from '../components/Banner0';
+import Content5 from '../components/Content5';
 import Content2 from '../components/Content2';
+import Content4 from '../components/Content4';
 import Content6 from '../components/Content6';
 import Footer1 from '../components/Footer';
 
 const props = {
-  nav_1_0: {
+  nav_1: {
     style: {
       position: 'absolute',
       height: '64px',
@@ -24,7 +26,7 @@ const props = {
       },
     },
   },
-  banner_0_10: {
+  banner_0: {
     style: {
       height: '100%',
     },
@@ -41,14 +43,43 @@ const props = {
       },
     },
   },
-  content_2_20: {
+  content_5: {
     style: {
       height: '100%',
     },
     dataSource: {
       title: {
-        title:'使用 GoIoT 来构建你的下一个网络应用？',
+        title:'多才多艺的 Go.IoT',
         content:'基于强大的 Node-RED 以及蓬勃发展的 npm 生态系统',
+      },
+      img: {
+        img:'http://o7spigzvd.bkt.clouddn.com/page-1-picture-sketch.png',
+      },
+      block1: {
+        img:'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png',
+        title:'前端显示组件',
+        content:'丰富的显示组件，简单的连接，展示出可视化数据。',
+      },
+      block2: {
+        img:'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
+        title:'后台逻辑模块',
+        content:'享受开源社区的成果，饮水思源，轻松部署，Geek 的最爱。',
+      },
+      block3: {
+        img:'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png',
+        title:'硬件接入节点',
+        content:'MQTT 接入，执行在硬件，智慧在云端。',
+      },
+    },
+  },
+  content_2: {
+    style: {
+      height: '100%',
+    },
+    dataSource: {
+      title: {
+        title:'使用 Go.IoT 来构建你的下一个网络应用？',
+        content:'让硬件、云端逻辑、前端显示，愉快而融洽地黏合在一起',
       },
       block0: {
         iconImg:'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
@@ -82,7 +113,50 @@ const props = {
       },
     },
   },
-  content_6_21: {
+  content_4: {
+    style: {
+      height: '100%',
+    },
+    dataSource: {
+      title: {
+        title:'看看 Go.IoT 能做什么',
+        content:'准备好你的脑洞，和我们一起飞上云端',
+      },
+      block1: {
+        img:'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+        content:'ant design',
+      },
+      block2: {
+        img:'https://os.alipayobjects.com/rmsportal/IwAqwmFOJJVHsBY.svg',
+        content:'ant motion',
+      },
+      block3: {
+        img:'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+        content:'ant design',
+      },
+      block4: {
+        img:'https://os.alipayobjects.com/rmsportal/IwAqwmFOJJVHsBY.svg',
+        content:'ant motion',
+      },
+      block5: {
+        img:'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+        content:'ant design',
+      },
+      block6: {
+        img:'https://os.alipayobjects.com/rmsportal/IwAqwmFOJJVHsBY.svg',
+        content:'ant motion',
+      },
+      block7: {
+        img:'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+        content:'ant design',
+      },
+      block8: {
+        img:'https://os.alipayobjects.com/rmsportal/IwAqwmFOJJVHsBY.svg',
+        content:'ant motion',
+      },
+    },
+  },
+  content_6: {
     style: {
       height: '100%',
     },
@@ -114,14 +188,14 @@ const props = {
       },
     },
   },
-  footer_1_90: {
+  footer_1: {
     style: {
       height: '400px',
     },
     dataSource: {
       logo: {
-        logo:'https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg',
-        content:'A efficient motion design solutions',
+        logo:'http://o7spigzvd.bkt.clouddn.com/goiot-rc3-132x33.white.png',
+        content:'An efficient IoT solution',
       },
       block1: {
         title:'产品',
@@ -135,8 +209,8 @@ const props = {
       },
       block3: {
         title:'资源',
-        content:'Ant Design\nAnt Design Mobile\nAnt Cool\nAntD Library',
-        contentLink:'#\n#\n#\n#',
+        content:'社区\nNode-RED Website\nNode-RED @ Slack',
+        contentLink:'/#\nhttp://nodered.org\nhttp://node-red.slack.com',
       },
       block4: {
         title:'关注',
@@ -144,7 +218,7 @@ const props = {
         contentLink:'#\n#\n#\n#',
       },
       copyright: {
-        content:'Copyright © 2016 The Project by <a href=\'#\'>Ant Motion</a>. All Rights Reserved',
+        content:'Copyright © 2016 Made with <span style=\"color: #a51616\">&hearts;</span> by <a href=\'linkgo.io\'>linkgo.io</a>. All Rights Reserved',
       },
     },
   },
@@ -156,11 +230,12 @@ export default class HomeMotion extends React.Component {
 
   render() {
     const children = [
-      <Nav1 key="nav_1_0" name="nav_1_0" {...props.nav_1_0} />,
-      <Banner0 key="banner_0_10" name="banner_0_10" {...props.banner_0_10} />,
-      <Content2 key="content_2_20" name="content_2_20" {...props.content_2_20} />,
-      <Content6 key="content_6_21" name="content_6_21" {...props.content_6_21} />,
-      <Footer1 key="footer_1_90" name="footer_1_90" {...props.footer_1_90} />,
+      <Nav1 key="nav_1" name="nav_1" {...props.nav_1} />,
+      <Banner0 key="banner_0" name="banner_0" {...props.banner_0} />,
+      <Content5 key="content_5" name="content_5" {...props.content_5} />,
+      <Content2 key="content_2" name="content_2" {...props.content_2} />,
+      <Content4 key="content_4" name="content_4" {...props.content_4} />,
+      <Footer1 key="footer_1" name="footer_1" {...props.footer_1} />,
     ];
     return (
       <div className="templates-wrapper">
