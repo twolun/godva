@@ -78,7 +78,7 @@ const props = {
     },
     dataSource: {
       title: {
-        title:'使用 Go.IoT 来构建你的下一个网络应用？',
+        title:'使用 Go.IoT 来构建你的下一个网络应用',
         content:'让硬件、云端逻辑、前端显示，愉快而融洽地黏合在一起',
       },
       block0: {
@@ -190,7 +190,7 @@ const props = {
   },
   footer_1: {
     style: {
-      height: '400px',
+      height: '300px',
     },
     dataSource: {
       logo: {
@@ -199,8 +199,8 @@ const props = {
       },
       block1: {
         title:'产品',
-        content:'产品更新记录\nAPI文档\n快速入门\n参考指南',
-        contentLink:'#\n#\n#\n#',
+        content:'产品更新记录\n快速入门\n参考指南',
+        contentLink:'#\n#\n#',
       },
       block2: {
         title:'关于',

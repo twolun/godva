@@ -31,7 +31,7 @@ class Header extends React.Component {
           >
             <Item style={{borderBottom: "none"}} key="why">{menu1}</Item>
             <Item style={{borderBottom: "none"}} key="feature">{menu2}</Item>
-            <Item style={{borderBottom: "none"}} key="explor">{menu3}</Item>
+            <Item style={{borderBottom: "none"}} key="explore">{menu3}</Item>
             <Item style={{borderBottom: "none"}} key="price" disabled>{menu4}</Item>
           </Menu>
         </TweenOne>
