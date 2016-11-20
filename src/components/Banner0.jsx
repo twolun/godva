@@ -40,7 +40,6 @@ class Banner extends React.Component {
           </div>
           <Button type="ghost" key="button">{button}<span style={{fontSize: "8px", color: "#a51616"}}>&nbsp;alpha</span></Button>
         </QueueAnim>
-      {/*
         <TweenOne
           animation={{ y: '-=20', yoyo: true, repeat: -1, duration: 1000 }}
           className={`${this.props.className}-icon`}
@@ -48,7 +47,6 @@ class Banner extends React.Component {
         >
           <Icon type="down" />
         </TweenOne>
-      */}
       </OverPack>
     );
   }
